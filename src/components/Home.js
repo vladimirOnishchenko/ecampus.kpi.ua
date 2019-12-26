@@ -6,6 +6,8 @@ import BbList from "./Bb/BbList";
 import * as Security from "../Security";
 import {NavLink} from "reactstrap";
 
+import ContractAlert from "./Сontract/Alerts";
+
 class Home extends React.Component {
   state = {
     user: null
@@ -34,6 +36,12 @@ class Home extends React.Component {
 
     return <div>
       <br />
+      <div className="row">
+        <div className="col-md-4">
+          <ContractAlert />
+        </div>
+      </div>
+
 
       <div className="jumbotron">
         <h1 className="display-4">Вітаємо, {!!user && user.fullName}!</h1>
@@ -41,18 +49,18 @@ class Home extends React.Component {
           Електронний кампус  – це система підтримки навчального процесу університету.
         </p>
         <hr className="my-4" />
-          <p>
-            Ви авторизовані у версії, що на даний час знаходиться у процесі розробки.
-            Частина функцій системи ще не реалізовані у поточній версії.
-            Для доступу до цих можливостей, ви можете перейти у попередню версію системи.
+        <p>
+          Ви авторизовані у версії, що на даний час знаходиться у процесі розробки.
+          Частина функцій системи ще не реалізовані у поточній версії.
+          Для доступу до цих можливостей, ви можете перейти у попередню версію системи.
 
-          </p>
-          <p className="lead">
-            <a className="btn btn-primary btn-lg"  role="button" href="http://campus.kpi.ua" target="_campus">
-              До поточної версії кампусу <i className="fa fa-external-link"/>
-            </a>
+        </p>
+        <p className="lead">
+          <a className="btn btn-primary btn-lg"  role="button" href="http://campus.kpi.ua" target="_campus">
+            До поточної версії кампусу <i className="fa fa-external-link"/>
+          </a>
 
-          </p>
+        </p>
       </div>
 
       <div className="row">
@@ -69,32 +77,32 @@ class Home extends React.Component {
               {/*</ul>*/}
 
               {Security.hasAccessToModule(user, Security.Modules.AttestationResult) &&
-                <h3><span href="#">Результати аттестації​</span><span className="badge badge-light">У розробцi</span></h3>
+              <h3><span href="#">Результати аттестації​</span><span className="badge badge-light">У розробцi</span></h3>
               }
 
               { Security.hasAccessToModule(user, Security.Modules.Statistic) && <h3>Статистика</h3> }
 
               { Security.hasAccessToModule(user, Security.Modules.Statistic) &&
-                <ul>
-                  <li><Link to="/statistic/zkm">Забезпечення кредитного модуля</Link></li>
-                  <li><Link to="/statistic/npp">Індивідуальне навантаження викладачів</Link></li>
-                </ul>
+              <ul>
+                <li><Link to="/statistic/zkm">Забезпечення кредитного модуля</Link></li>
+                <li><Link to="/statistic/npp">Індивідуальне навантаження викладачів</Link></li>
+              </ul>
               }
 
               {Security.hasAccessToModule(user, Security.Modules.RNP) &&
-                <h3><span href="#">РНП</span><span className="badge badge-light">У розробцi</span></h3>
+              <h3><span href="#">РНП</span><span className="badge badge-light">У розробцi</span></h3>
               }
 
               {Security.hasAccessToModule(user, Security.Modules.Messages) &&
-                <h3><span href="#">Повідомлення</span><span className="badge badge-light">У розробцi</span></h3>
+              <h3><span href="#">Повідомлення</span><span className="badge badge-light">У розробцi</span></h3>
               }
 
               {Security.hasAccessToModule(user, Security.Modules.PersonalArea) && <h3>Аккаунт</h3> }
 
               {Security.hasAccessToModule(user, Security.Modules.PersonalArea) &&
-                <ul>
-                  <li><Link to="/settings">Налаштування</Link></li>
-                </ul>
+              <ul>
+                <li><Link to="/settings">Налаштування</Link></li>
+              </ul>
               }
 
 
@@ -106,16 +114,16 @@ class Home extends React.Component {
 
 
               {Security.hasAccessToModule(user, Security.Modules.Information) &&
-                <ul>
-                  <li><a target="_campus_calendar" href="http://rozklad.kpi.ua/">Розклад занять та сесії <i
+              <ul>
+                <li><a target="_campus_calendar" href="http://rozklad.kpi.ua/">Розклад занять та сесії <i
                     className="fa fa-external-link"/></a></li>
-                  <li><Link to="/bb">Дошка оголошень</Link></li>
-                  <li><Link to="/help">Інструкція користувача</Link></li>
-                  <li><Link to="/privacy">Правила використання інформації сайту</Link></li>
-                  <li><Link to="/about">Про систему</Link></li>
-                  <li><Link to="/documents">Документи КПІ ім. Ігоря Сікорського</Link></li>
-                  <li><Link to="/contacts">Контактнi данi</Link></li>
-                </ul>
+                <li><Link to="/bb">Дошка оголошень</Link></li>
+                <li><Link to="/help">Інструкція користувача</Link></li>
+                <li><Link to="/privacy">Правила використання інформації сайту</Link></li>
+                <li><Link to="/about">Про систему</Link></li>
+                <li><Link to="/documents">Документи КПІ ім. Ігоря Сікорського</Link></li>
+                <li><Link to="/contacts">Контактнi данi</Link></li>
+              </ul>
               }
 
             </div>

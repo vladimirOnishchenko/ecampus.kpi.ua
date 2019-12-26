@@ -19,7 +19,7 @@ import BbIndex from "./components/Bb/BbIndex";
 import StatisticIndex from "./components/Statistic/StatisticIndex";
 import NPP from "./components/Statistic/NPP";
 import ZKM from "./components/Statistic/ZKM";
-
+import Contract from "./components/Сontract/Contract"
 
 class App extends Component {
 
@@ -38,47 +38,48 @@ class App extends Component {
 
   render () {
     return (
-      <div className="App">
+        <div className="App">
 
-        <Header user={this.state.user} onLogout={() => this.setState({user: null})} />
+          <Header user={this.state.user} onLogout={() => this.setState({user: null})} />
 
-        <div className="container-fluid content">
-          <div className="content">
+          <div className="container-fluid content">
+            <div className="content">
 
-            <Switch>
-              <Route exact path='/' component={Login}/>
-              <Route exact path='/home' component={Home}/>
-              <Route exact path='/login' component={Login}/>
-              <Route exact path='/kpiid' component={KPIIDLogin}/>
-              <Route exact path='/privacy' component={Privacy}/>
-              <Route exact path='/documents' component={Documents}/>
-              <Route exact path='/about' component={About}/>
-              <Route exact path='/help' component={Help}/>
-              <Route exact path='/contacts' component={Contacts}/>
-              <Route exact path='/bb' component={BbIndex}/>
-              <Route exact path='/settings' component={Settings}/>
-              <Route exact path='/settings-editor' component={SettingsEditor}/>
-              <Route exact path='/restore-password' component={RestorePassword}/>
-              <Route exact path='/social-forbidden' component={SocialForbidden}/>
-              <Route exact path='/statistic' component={StatisticIndex}/>
-              <Route exact path='/statistic/npp' component={NPP}/>
-              <Route exact path='/statistic/zkm' component={ZKM}/>
-            </Switch>
+              <Switch>
+                <Route exact path='/' component={Login}/>
+                <Route exact path='/home' component={Home}/>
+                <Route exact path='/login' component={Login}/>
+                <Route exact path='/kpiid' component={KPIIDLogin}/>
+                <Route exact path='/privacy' component={Privacy}/>
+                <Route exact path='/documents' component={Documents}/>
+                <Route exact path='/about' component={About}/>
+                <Route exact path='/help' component={Help}/>
+                <Route exact path='/contacts' component={Contacts}/>
+                <Route exact path='/bb' component={BbIndex}/>
+                <Route exact path='/settings' component={Settings}/>
+                <Route exact path='/settings-editor' component={SettingsEditor}/>
+                <Route exact path='/restore-password' component={RestorePassword}/>
+                <Route exact path='/social-forbidden' component={SocialForbidden}/>
+                <Route exact path='/statistic' component={StatisticIndex}/>
+                <Route exact path='/statistic/npp' component={NPP}/>
+                <Route exact path='/statistic/zkm' component={ZKM}/>
+                <Route exact path='/contract' component={Contract}/>
+              </Switch>
 
-          </div>
-        </div>
-
-        <footer className="container-fluid">
-          <div className="row">
-            <div className="col-md-6">
-              Усі права застережено. &copy; {new Date().getFullYear()} <a href="http://kpi.ua/">КПІ ім. Ігоря Сікорського</a>
-              <br/>
-              Розробник: <a href="http://kbis.kpi.ua/">Конструкторське бюро інформаційних систем</a>
             </div>
           </div>
-        </footer>
 
-      </div>
+          <footer className="container-fluid">
+            <div className="row">
+              <div className="col-md-6">
+                Усі права застережено. &copy; {new Date().getFullYear()} <a href="http://kpi.ua/">КПІ ім. Ігоря Сікорського</a>
+                <br/>
+                Розробник: <a href="http://kbis.kpi.ua/">Конструкторське бюро інформаційних систем</a>
+              </div>
+            </div>
+          </footer>
+
+        </div>
     );
   }
 }

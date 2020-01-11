@@ -20,6 +20,7 @@ import StatisticIndex from "./components/Statistic/StatisticIndex";
 import NPP from "./components/Statistic/NPP";
 import ZKM from "./components/Statistic/ZKM";
 import Contract from "./components/Сontract/Contract"
+import Approved from "./components/Сontract/Approved"
 
 class App extends Component {
 
@@ -64,6 +65,7 @@ class App extends Component {
                 <Route exact path='/statistic/npp' component={NPP}/>
                 <Route exact path='/statistic/zkm' component={ZKM}/>
                 <Route exact path='/contract' component={Contract}/>
+                <Route exact path='/contract/approved' component={Approved}/>
               </Switch>
 
             </div>

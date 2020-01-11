@@ -1,11 +1,13 @@
 import React from "react";
+import Form from 'react-bootstrap/Form'
 
 class Contract extends React.Component {
     render() {
         return (
             <div className="row">
                 <br />
-                <div className="col">
+                <div className="col-md-2"></div>
+                <div className="col-md-7">
                     <br />
                     <section id="section1">
                         <h5>Обов’язки науково-педагогічного працівника
@@ -54,61 +56,135 @@ class Contract extends React.Component {
 
                         <section id="section2">
 
-                            <div className="row">
-                                <div className="col-sm-3 mb-3">
+                            <div className="row mb-5">
+                                <div className="col-sm-6">
+                                    <h5>Видати навчальні посібники</h5>
+                                    <p className="text-muted font-size-sm">
+                                        Вказати  кількість від 0 до 10
+                                    </p>
+                                    <div className="custom-spinner ">
+                                        <Form.Control as="select" className="col-sm-3" name="tutorial">
+                                            <option>0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                        </Form.Control>
+                                    </div>
+                                </div>
+                                <div className="col-sm-6">
+                                    <h5>Видати монографії   </h5>
+                                    <p className="text-muted font-size-sm">
+                                        Вказати  кількість від 0 до 10
+                                    </p>
+                                    <div className="custom-spinner">
+                                        <Form.Control as="select" className="col-sm-3" name="tutorial">
+                                            <option>0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                        </Form.Control>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="row  mb-5">
+                                <div className="col-sm-6">
                                     <h5>Видати підручники</h5>
                                     <p className="text-muted font-size-sm">
-                                        видати підручники та/або навчальні посібники чи монографії
+                                        Вказати  кількість від 0 до 10
                                     </p>
                                     <div className="custom-spinner">
-                                        <button className="btn btn-icon rounded-circle btn-faded-primary down"
-                                                type="button"><i className="material-icons">remove</i></button>
-                                        <input type="number" name="book" className="form-control" value="1" min="1"
-                                               max="100" />
-                                            <button className="btn btn-icon rounded-circle btn-faded-primary up"
-                                                    type="button"><i className="material-icons">add</i></button>
+                                        <Form.Control as="select" className="col-sm-3" name="tutorial">
+                                            <option>0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                        </Form.Control>
                                     </div>
                                 </div>
-                                <div className="col-sm-3 mb-3">
+                                <div className="col-sm-6">
                                     <h5>Забезпечити одержання патенту</h5>
                                     <p className="text-muted font-size-sm">
-                                        забезпечити одержання щонайменше 2 патенту(ів)
+                                        Вказати  кількість від 0 до 10
                                     </p>
                                     <div className="custom-spinner">
-                                        <button className="btn btn-icon rounded-circle btn-faded-primary down"
-                                                type="button"><i className="material-icons">remove</i></button>
-                                        <input name="patent" type="number" className="form-control" value="1" min="1"
-                                               max="100" />
-                                        <button className="btn btn-icon rounded-circle btn-faded-primary up"
-                                                type="button"><i className="material-icons">add</i></button>
+                                        <Form.Control as="select" className="col-sm-3" name="tutorial">
+                                            <option>0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                        </Form.Control>
                                     </div>
                                 </div>
-                                <div className="col-sm-3 mb-3">
+                            </div>
+                            <div className="row  mb-5">
+                                <div className="col-sm-6">
                                     <h5>Здійснювати наукове консультування докторанта(ів)</h5>
                                     <p className="text-muted font-size-sm">
-                                        здійснювати наукове консультування докторанта(ів)
+                                        Вказати  кількість від 0 до 10
                                     </p>
                                     <div className="custom-spinner">
-                                        <button className="btn btn-icon rounded-circle btn-faded-primary down"
-                                                type="button"><i className="material-icons">remove</i></button>
-                                        <input type="number" name="doctorantu" className="form-control" value="1"
-                                               min="1" max="100" />
-                                        <button className="btn btn-icon rounded-circle btn-faded-primary up"
-                                                type="button"><i className="material-icons">add</i></button>
+                                        <Form.Control as="select" className="col-sm-3" name="tutorial">
+                                            <option>0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                        </Form.Control>
                                     </div>
                                 </div>
-                                <div className="col-sm-3 mb-3">
+                                <div className="col-sm-6">
                                     <h5>Керівництво аспірантом(ами)</h5>
                                     <p className="text-muted font-size-sm">
-                                        керівництво аспірантом(ами)
+                                        Вказати  кількість від 0 до 10
                                     </p>
                                     <div className="custom-spinner">
-                                        <button className="btn btn-icon rounded-circle btn-faded-primary down"
-                                                type="button"><i className="material-icons">remove</i></button>
-                                        <input name="acpirante" type="number" className="form-control" value="1" min="1"
-                                               max="100" />
-                                        <button className="btn btn-icon rounded-circle btn-faded-primary up"
-                                                type="button"><i className="material-icons">add</i></button>
+                                        <Form.Control as="select" className="col-sm-3" name="tutorial">
+                                            <option>0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                        </Form.Control>
                                     </div>
                                 </div>
                             </div>
@@ -138,7 +214,7 @@ class Contract extends React.Component {
 
                 </div>
 
-                <div className="col-3 d-none d-xl-block">
+                <div className="col-md-3 d-none d-xl-block">
                     <div className="nav-section">
                         <label className="text-muted"></label>
                         <nav id="navSection" className="nav flex-column">

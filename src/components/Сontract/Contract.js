@@ -1,7 +1,43 @@
 import React from "react";
+import * as campus from "../../CampusClient";
 import Form from 'react-bootstrap/Form'
+import axios from 'axios';
+import { saveAs } from 'file-saver';
 
 class Contract extends React.Component {
+    state = {
+        user: null
+      };
+    
+    async componentDidMount() {
+        const user = await campus.getCurrentUser();
+    
+        if (!user) {
+          this.props.history.push('/login');
+          return;
+        } else {
+    
+          if (!user.modules){
+            await campus.logout();
+            window.location.href = 'https://ecampus.kpi.ua/'
+          }
+    
+        }
+    
+        this.setState({user});
+        axios.post('http://guns.laravel/api/pdf', {
+            fullName: user.fullName,
+            //lastName: 'Flintstone'
+          })
+          .then(() => axios.get('http://guns.laravel/api/pdf', { responseType: 'blob' }))
+          .then((res) => {
+            console.log(res.data);
+            const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
+            saveAs(pdfBlob, "contract.pdf");
+            
+          })
+      }
+
     render() {
         return (
             <div className="row">

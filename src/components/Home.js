@@ -7,7 +7,6 @@ import * as Security from "../Security";
 import {NavLink} from "reactstrap";
 
 import ContractAlert from "./Сontract/Alerts";
-
 class Home extends React.Component {
   state = {
     user: null
